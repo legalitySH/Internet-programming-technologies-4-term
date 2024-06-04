@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<!-- Определение перечисления для жанров -->
+	<xs:simpleType name="Genre">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FICTION"/>
+			<xs:enumeration value="NON_FICTION"/>
+			<xs:enumeration value="SCIENCE_FICTION"/>
+			<xs:enumeration value="MYSTERY"/>
+			<xs:enumeration value="HORROR"/>
+			<xs:enumeration value="ROMANCE"/>
+			<xs:enumeration value="DEFAULT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Определение комплексного типа для Edition -->
+	<xs:complexType name="Edition">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="price" type="xs:double"/>
+			<xs:element name="genre" type="Genre"/>
+			<xs:element name="publishingYear" type="xs:int"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- Определение комплексного типа для Book с использованием наследования -->
+	<xs:complexType name="Book">
+		<xs:complexContent>
+			<xs:extension base="Edition">
+				<xs:sequence>
+					<xs:element name="author" type="xs:string"/>
+					<xs:element name="countOfPages" type="xs:int"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<!-- Определение корневого элемента -->
+	<xs:element name="library">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="book" type="Book" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

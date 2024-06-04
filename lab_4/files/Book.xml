@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/Book.xsd">
+	<book>
+		<title>The Catcher in the Rye</title>
+		<price>15.99</price>
+		<genre>NON_FICTION</genre>
+		<publishingYear>1951</publishingYear>
+		<author>J.D. Salinger</author>
+		<countOfPages>224</countOfPages>
+	</book>
+	
+	<book>
+		<title>To Kill a Mockingbird</title>
+		<price>12.50</price>
+		<genre>FICTION</genre>
+		<publishingYear>1960</publishingYear>
+		<author>Harper Lee</author>
+		<countOfPages>336</countOfPages>
+	</book>
+</library>

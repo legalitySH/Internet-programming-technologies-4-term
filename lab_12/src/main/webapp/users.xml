@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <login>Login1</login>
+        <role>Role</role>
+    </user>
+    <user>
+        <login>Login2</login>
+        <role>Role</role>
+    </user>
+    <user>
+        <login>Login3</login>
+        <role>Role</role>
+    </user>
+    <user>
+        <login>Login4</login>
+        <role>Role</role>
+    </user>
+</users>
